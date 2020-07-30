@@ -1,0 +1,2 @@
+rootProject.name='P_RecyclerView_GridLayoutManager'
+include ':app'
