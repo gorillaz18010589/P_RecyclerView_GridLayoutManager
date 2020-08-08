@@ -1,6 +1,7 @@
 package com.example.p_recyclerview_gridlayoutmanager;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import java.util.List;
 public class BlanceRecyclerViewAdapter extends RecyclerView.Adapter<BlanceRecyclerViewAdapter.BlanceViewHolder> {
     private List<Game> mData;
     private Context mContext;
+    private double sum ;
 
     public BlanceRecyclerViewAdapter(List<Game> mData, Context mContext) {
         this.mData = mData;
@@ -31,8 +33,9 @@ public class BlanceRecyclerViewAdapter extends RecyclerView.Adapter<BlanceRecycl
 
     @Override
     public void onBindViewHolder(@NonNull BlanceViewHolder holder, int position) {
+
         holder.tvGameName.setText(mData.get(position).name);
-        holder.tvMoney.setText(mData.get(position).value);
+        holder.tvMoney.setText(String.valueOf(mData.get(position).value));
     }
 
     @Override

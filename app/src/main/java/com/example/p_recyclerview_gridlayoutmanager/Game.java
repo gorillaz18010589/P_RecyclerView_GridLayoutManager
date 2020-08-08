@@ -1,13 +1,15 @@
 package com.example.p_recyclerview_gridlayoutmanager;
 
 public class Game {
-    public Game(String name, String value) {
+    String name;
+    double value;
+
+    public Game(String name, double value) {
         this.name = name;
         this.value = value;
     }
 
-    String name;
-    String value;
+
 
     public String getName() {
         return name;
@@ -17,11 +19,11 @@ public class Game {
         this.name = name;
     }
 
-    public String getValue() {
+    public double getValue() {
         return value;
     }
 
-    public void setValue(String value) {
+    public void setValue(double value) {
         this.value = value;
     }
 }
